@@ -1,0 +1,25 @@
+{% extends "horses/base.html" %}
+
+{% block content %}
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Breed</th>
+            <th>BornOn</th>
+            <th>Price</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for horse in horses %}
+            <tr>
+                <td>{{ horse.breed }}</td>
+                <td>{{ horse.bornOn }}</td>
+                <td>{{ horse.price }}</td>
+                <td>{{ horse.description }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
